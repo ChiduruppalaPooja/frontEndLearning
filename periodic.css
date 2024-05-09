@@ -1,0 +1,142 @@
+body {
+    background: linear-gradient(to top, rgb(246, 203, 122), rgb(254 172 143));
+    font-family: "Poppins", sans-serif;
+    background-attachment: fixed;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-gap: 5px;
+}
+
+.periodic-element {
+
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.periodic-element.two {
+    background: linear-gradient(45deg, rgba(37, 156, 37, 0.808), rgb(186, 197, 186));
+}
+
+.periodic-element.one {
+    background: linear-gradient(45deg, rgb(245, 9, 80), rgb(186, 197, 186));
+}
+
+.periodic-element.eight {
+    background: linear-gradient(45deg, rgb(47, 141, 136), rgb(124, 148, 125));
+}
+
+.periodic-element.four {
+    background: linear-gradient(45deg, rgb(240, 68, 6), rgb(186, 197, 186));
+}
+
+.periodic-element.five {
+    background: linear-gradient(45deg, rgb(247, 149, 3), rgb(186, 197, 186));
+}
+
+.periodic-element.six {
+    background: linear-gradient(45deg, rgb(7, 175, 236), rgb(186, 197, 186));
+}
+
+.periodic-element.seven {
+    background: linear-gradient(45deg, rgb(113, 56, 212), rgb(186, 197, 186));
+}
+
+.periodic-element.three {
+    background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186));
+}
+
+.periodic-element.nine {
+    background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186));
+}
+
+.title {
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(235, 71, 71);
+    text-align: center;
+    text-shadow: 1px 5px 5px rgb(247, 240, 240);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.header{
+    text-align: center;
+    width: 100%;
+}
+
+.name {
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.periodic-element:hover {
+    transform: scale(1.25);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.color-box {
+    width: 18px;
+    height: 18px;
+    margin-left: 50px; 
+    
+}
+.periodic-element-empty{
+    padding-top: 10px;
+    font-size: 14px;
+}
+.color-box.nine{
+    background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186));
+}
+.color-box.eight{
+    background: linear-gradient(45deg, rgb(47, 141, 136), rgb(124, 148, 125));
+    margin-top: 8px;
+}
+.color-box.seven{
+    background: linear-gradient(45deg, rgb(113, 56, 212), rgb(186, 197, 186));
+    margin-top: 8px;
+}
+.color-box.six{
+    background: linear-gradient(45deg, rgb(7, 175, 236), rgb(186, 197, 186));
+    margin-top: 8px;
+}
+.color-box.five{
+    background: linear-gradient(45deg, rgb(247, 149, 3), rgb(186, 197, 186));
+    margin-top: 8px;
+}
+.color-box.four{
+    background: linear-gradient(45deg, rgb(240, 68, 6), rgb(186, 197, 186));
+    margin-top: 8px;
+}
+.color-box.three{
+    background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186));
+    margin-top: 8px;
+}
+.color-box.two{
+    background: linear-gradient(45deg, rgba(37, 156, 37, 0.808), rgb(186, 197, 186));
+    margin-top: 8px;
+}
+.color-box.one{
+    background: linear-gradient(45deg, rgb(245, 9, 80), rgb(186, 197, 186));
+    margin-top: 8px;
+}
+
+.color-box:hover{
+    transform: scale(1.25);
+    box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+    z-index:1;
+    cursor: pointer;
+}
