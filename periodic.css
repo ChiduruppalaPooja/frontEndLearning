@@ -11,7 +11,6 @@ body {
 }
 
 .periodic-element {
-
     padding: 10px;
     text-align: center;
     cursor: pointer;
@@ -19,40 +18,11 @@ body {
     position: relative;
 }
 
-.periodic-element.two {
-    background: linear-gradient(45deg, rgba(37, 156, 37, 0.808), rgb(186, 197, 186));
-}
-
-.periodic-element.one {
-    background: linear-gradient(45deg, rgb(245, 9, 80), rgb(186, 197, 186));
-}
-
-.periodic-element.eight {
-    background: linear-gradient(45deg, rgb(47, 141, 136), rgb(124, 148, 125));
-}
-
-.periodic-element.four {
-    background: linear-gradient(45deg, rgb(240, 68, 6), rgb(186, 197, 186));
-}
-
-.periodic-element.five {
-    background: linear-gradient(45deg, rgb(247, 149, 3), rgb(186, 197, 186));
-}
-
-.periodic-element.six {
-    background: linear-gradient(45deg, rgb(7, 175, 236), rgb(186, 197, 186));
-}
-
-.periodic-element.seven {
-    background: linear-gradient(45deg, rgb(113, 56, 212), rgb(186, 197, 186));
-}
-
-.periodic-element.three {
-    background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186));
-}
-
-.periodic-element.nine {
-    background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186));
+.periodic-element:hover {
+    transform: scale(1.25);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
 }
 
 .title {
@@ -65,7 +35,8 @@ body {
     margin-right: auto;
     width: 100%;
 }
-.header{
+
+.header {
     text-align: center;
     width: 100%;
 }
@@ -81,62 +52,36 @@ body {
     font-weight: 900;
 }
 
-.periodic-element:hover {
-    transform: scale(1.25);
-    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.6);
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1;
-}
-
 .color-box {
     width: 18px;
     height: 18px;
-    margin-left: 50px; 
-    
-}
-.periodic-element-empty{
-    padding-top: 10px;
-    font-size: 14px;
-}
-.color-box.nine{
-    background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186));
-}
-.color-box.eight{
-    background: linear-gradient(45deg, rgb(47, 141, 136), rgb(124, 148, 125));
-    margin-top: 8px;
-}
-.color-box.seven{
-    background: linear-gradient(45deg, rgb(113, 56, 212), rgb(186, 197, 186));
-    margin-top: 8px;
-}
-.color-box.six{
-    background: linear-gradient(45deg, rgb(7, 175, 236), rgb(186, 197, 186));
-    margin-top: 8px;
-}
-.color-box.five{
-    background: linear-gradient(45deg, rgb(247, 149, 3), rgb(186, 197, 186));
-    margin-top: 8px;
-}
-.color-box.four{
-    background: linear-gradient(45deg, rgb(240, 68, 6), rgb(186, 197, 186));
-    margin-top: 8px;
-}
-.color-box.three{
-    background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186));
-    margin-top: 8px;
-}
-.color-box.two{
-    background: linear-gradient(45deg, rgba(37, 156, 37, 0.808), rgb(186, 197, 186));
-    margin-top: 8px;
-}
-.color-box.one{
-    background: linear-gradient(45deg, rgb(245, 9, 80), rgb(186, 197, 186));
-    margin-top: 8px;
+    margin-left: 50px;
 }
 
-.color-box:hover{
+.color-box:hover {
     transform: scale(1.25);
     box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
-    z-index:1;
+    z-index: 1;
     cursor: pointer;
 }
+
+
+.two { background: linear-gradient(45deg, rgba(37, 156, 37, 0.808), rgb(186, 197, 186)); }
+.one { background: linear-gradient(45deg, rgb(245, 9, 80), rgb(186, 197, 186)); }
+.eight { background: linear-gradient(45deg, rgb(47, 141, 136), rgb(124, 148, 125)); }
+.four { background: linear-gradient(45deg, rgb(240, 68, 6), rgb(186, 197, 186)); }
+.five { background: linear-gradient(45deg, rgb(247, 149, 3), rgb(186, 197, 186)); }
+.six { background: linear-gradient(45deg, rgb(7, 175, 236), rgb(186, 197, 186)); }
+.seven { background: linear-gradient(45deg, rgb(113, 56, 212), rgb(186, 197, 186)); }
+.three { background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186)); }
+.nine { background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186)); }
+
+.color-box.nine { background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186)); }
+.color-box.eight { background: linear-gradient(45deg, rgb(47, 141, 136), rgb(124, 148, 125)); }
+.color-box.seven { background: linear-gradient(45deg, rgb(113, 56, 212), rgb(186, 197, 186)); }
+.color-box.six { background: linear-gradient(45deg, rgb(7, 175, 236), rgb(186, 197, 186)); }
+.color-box.five { background: linear-gradient(45deg, rgb(247, 149, 3), rgb(186, 197, 186)); }
+.color-box.four { background: linear-gradient(45deg, rgb(240, 68, 6), rgb(186, 197, 186)); }
+.color-box.three { background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186)); }
+.color-box.two { background: linear-gradient(45deg, rgba(37, 156, 37, 0.808), rgb(186, 197, 186)); }
+.color-box.one { background: linear-gradient(45deg, rgb(245, 9, 80), rgb(186, 197, 186)); }
