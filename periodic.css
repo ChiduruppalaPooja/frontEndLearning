@@ -76,12 +76,4 @@ body {
 .three { background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186)); }
 .nine { background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186)); }
 
-.color-box.nine { background: linear-gradient(45deg, rgb(46, 4, 231), rgb(186, 197, 186)); }
-.color-box.eight { background: linear-gradient(45deg, rgb(47, 141, 136), rgb(124, 148, 125)); }
-.color-box.seven { background: linear-gradient(45deg, rgb(113, 56, 212), rgb(186, 197, 186)); }
-.color-box.six { background: linear-gradient(45deg, rgb(7, 175, 236), rgb(186, 197, 186)); }
-.color-box.five { background: linear-gradient(45deg, rgb(247, 149, 3), rgb(186, 197, 186)); }
-.color-box.four { background: linear-gradient(45deg, rgb(240, 68, 6), rgb(186, 197, 186)); }
-.color-box.three { background: linear-gradient(45deg, rgb(209, 7, 27), rgb(186, 197, 186)); }
-.color-box.two { background: linear-gradient(45deg, rgba(37, 156, 37, 0.808), rgb(186, 197, 186)); }
-.color-box.one { background: linear-gradient(45deg, rgb(245, 9, 80), rgb(186, 197, 186)); }
+
