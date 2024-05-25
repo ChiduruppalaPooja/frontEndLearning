@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="light-mode">
     <div class="article-page">
         <div class="top-bar">
             <div class="top-frame">
@@ -19,7 +19,11 @@
                     <h3 class="culture content">Culture</h3>
                     <h3 class="ideas content">Ideas</h3>
                     <h3 class="technology content">Technology</h3>
-                    <img src="./image/Search outlined.png" alt="" class="search">
+                    <img src="./image/Search outlined.png" alt="" class="search" id="searchIcon">
+                    <div class="search-popup" id="searchPopup">
+                    <input type="text" placeholder="Search..." id="searchInput" class="search-text">
+                    <button onclick="performSearch()" class="search-button">Search</button>
+                </div>
                 </div>
                 <img src="./image/Menu outlined.png" alt="" class="menu">
             </div>
@@ -206,7 +210,7 @@
                             <div class="footer-links"><h1 class="links-footer">Quick Links</h1></div>
                         </div>
                         <div class="mode"><h2 class="footer-mode">Light/dark mode</h2>
-                        <div class="group-4">
+                        <div class="group-4" onclick="toggleMode()">
                             <div class="rectangle-footer"></div>
                                 <div class="elipse"></div>
                             
@@ -216,12 +220,12 @@
                     <div class="footer-frame-2">
                         <div class="subscribe"><h1 class="subscribe-text">Subscribe for Newsletter</h1>
                         <div class="subtitle"><p class="subtitle-text">Get our hand-picked discoveries & articles delivered right to your inbox.</p></div>
-                    <div class="group-3">
-                        <div class="email-box">
-                            <p class="email">Email address</p>
-                        </div>
-                        <button class="submit"><p class="submit-text">SUBMIT</p></button>
-                    </div></div>
+                        <div class="group-3">
+                            <div class="email-box">
+                                <input type="text" class="email" placeholder="Email address">
+                            </div>
+                            <button class="submit"><p class="submit-text">SUBMIT</p></button>
+                        </div></div>
                     
                         <div class="follow">
                             <h1 class="follow-on">Follow On</h1>

@@ -3,6 +3,26 @@
     margin: 0;
     box-sizing: border-box;
 }
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #2B2B2B;
+    color: white;
+}
+body.dark-mode .elipse {
+    left: 26px;
+}
 
 .article-page{
     display: flex;
@@ -11,16 +31,19 @@
     width: 100%;
     height: 100%;
 }
-.top-bar{
-    height: 5rem;
-    background-color:  #2B2B2B;
+.top-bar {
+    height: 80px;
+    background-color: #2B2B2B;
+    padding: 22px;
+    box-sizing: border-box;
 }
 .top-frame{
-    position: relative;
-    top: 1.375rem;
+   
     display: flex;
     gap: 7.5rem;
-}
+    margin: 0 auto;
+    position: relative;
+    }
 .title{
 font-family: Epilogue;
 font-size: 1.125rem;
@@ -44,10 +67,16 @@ line-height: 2.25rem;
 text-align: left;
 color:#FFFFFF;
 }
-.menu{
-   position: absolute;
-    right: 4.25rem;
-    top: 0.125rem;
+.content:hover{
+    border-bottom: 2px solid #FFFFFF;
+    cursor: pointer;
+}
+.menu {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
 }
 .article-header{
     display: flex;
@@ -57,6 +86,9 @@ color:#FFFFFF;
 }
 .go-back{
     position: relative;
+}
+.go-back:hover{
+    cursor: pointer;
 }
 .vector {
     border: 2px solid #A0A1A4;
@@ -233,6 +265,24 @@ height: 22px;
     border: 1px;
 }
 
+body.dark-mode .group-1-technology {
+    gap: 0px;
+    font-family: Epilogue;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #FFFFFF;
+    padding: 6px 8px 6px 18px;
+}
+
+body.dark-mode .group-1-rectangle {
+    gap: 0px;
+    width: 95px;
+    border-radius: 46px;
+    border: 1px solid #1976D2;
+    background-color: #1976D2;
+}
 .group-1-technology {
     gap: 0px;
     font-family: Epilogue;
@@ -534,27 +584,55 @@ border-radius: 5px;
 display: flex;
 flex-direction: row;
 }
-.email-box{
+.email-box, .search-text{
     width: 240px;
 height: 40px;
 top: 108px;
 gap: 0px;
 border-radius: 5px;
 border: 1px solid rgba(149, 149, 149, 1);
+background-color: #FFFFFF;
+}
+.search-button {
+    gap: 0px;
+    font-family: Epilogue;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #1976D2;
+    text-align: center;
+    border-radius: 46px;
+    border: 1px solid #1976D2;
+    padding: 0 12px 0 12px;
+    background-color: #FFFFFF;
+    
+}
+.search-popup {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); 
+    left: 0;
+    background: #fff;
+    padding: 10px;
+    z-index: 999;
+
 }
 .email{
     font-family: Epilogue;
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 2px;
-text-align: left;
-height: 24px;
-padding-top: 13px;
-padding-left: 13px;
-gap: 0px;
-opacity: 0px;
-color: rgba(149, 149, 149, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-align: left;
+    height: 24px;
+    padding-top: 10px;
+    padding-left: 13px;
+    gap: 0px;
+    opacity: 0px;
+    color: rgba(149, 149, 149, 1);
+    border: none;
+    outline: none;
 
 }
 .submit{
@@ -616,7 +694,10 @@ flex-direction: row;
     margin-left: 13rem;
     width: 58rem;
 }
-
+body.dark-mode .rectangle-footer {
+    background-color: #1976D2;
+    ;
+}
 @media screen and (max-width: 1200px) {
     .posts-divider {
         width: 800px;
@@ -639,4 +720,45 @@ flex-direction: row;
     .posts-divider {
         width: 300px;
     }
+}
+
+@media (max-width: 800px) {
+
+    .inner-frame,
+    .all.content,
+    .culture.content,
+    .ideas.content,
+    .technology.content {
+        display: none;
+    }
+
+    .title {
+        margin-left: 1rem;
+    }
+
+    .menu {
+        right: 2rem;
+        width: 28px;
+        height: 28px;
+    }
+    .article-header{
+        margin: 80px 20px 40px 20px !important;
+    }
+    .Body{
+        padding: 40px 20px 40px 20px !important;
+    }
+    .related-posts{
+       padding: 0px 20px 100px 20px !important;
+    }
+    .footer-frame{
+        padding: 80px 20px 80px 20px !important;
+    }
+    .posts-divider-footer{
+        width: 315px !important;
+        margin-left: 2rem !important;
+    }
+}
+.search:hover, .search-button:hover, .group-1:hover, .learn-more:hover, 
+.submit:hover{
+    cursor: pointer;
 }

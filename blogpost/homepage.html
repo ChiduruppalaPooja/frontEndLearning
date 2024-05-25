@@ -6,7 +6,7 @@
     <title>BlogPost</title>
     <link  rel="stylesheet" href="homepage.css">
 </head>
-<body>
+<body class="light-mode">
     <div class="homepage">
         <div class="top-bar">
             <div class="top-frame">
@@ -16,9 +16,14 @@
                     <h3 class="culture content">Culture</h3>
                     <h3 class="ideas content">Ideas</h3>
                     <h3 class="technology content">Technology</h3>
-                    <img src="./image/Search outlined.png" alt="" class="search">
+                    <img src="./image/Search outlined.png" alt="" class="search" id="searchIcon">
+                    <div class="search-popup" id="searchPopup">
+                    <input type="text" placeholder="Search..." id="searchInput" class="search-text">
+                    <button onclick="performSearch()" class="search-button">Search</button>
+                </div>
                 </div>
                 <img src="./image/Menu outlined.png" alt="" class="menu">
+                
             </div>
         </div>
         <div class="homepage-header">
@@ -380,14 +385,14 @@
     <div class="cta">
         <div class="pagination">
             <a href="#" class="prev">&lt;</a>
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <span>.....</span>
-        <a href="#">10</a>
-        <a href="#" class="next">&gt;</a>
+            <a href="#" class="page active">1</a>
+            <a href="#" class="page">2</a>
+            <a href="#" class="page">3</a>
+            <a href="#" class="page">4</a>
+            <a href="#" class="page">5</a>
+            <span class="ellipsis">.....</span>
+            <a href="#" class="page">10</a>
+            <a href="#" class="next">&gt;</a>
         </div>
     </div>
     <div class="footer">
@@ -402,8 +407,9 @@
                     <div class="footer-contact"><h1 class="contact-footer">Contact</h1></div>
                     <div class="footer-links"><h1 class="links-footer">Quick Links</h1></div>
                 </div>
-                <div class="mode"><h2 class="footer-mode">Light/dark mode</h2>
-                <div class="group-4">
+                <div class="mode">
+                    <h2 class="footer-mode">Light/dark mode</h2>
+                <div class="group-4" onclick="toggleMode()">
                     <div class="rectangle-footer"></div>
                         <div class="elipse"></div>
                     
@@ -415,7 +421,7 @@
                 <div class="subtitle"><p class="subtitle-text">Get our hand-picked discoveries & articles delivered right to your inbox.</p></div>
             <div class="group-3">
                 <div class="email-box">
-                    <p class="email">Email address</p>
+                    <input type="text" class="email" placeholder="Email address">
                 </div>
                 <button class="submit"><p class="submit-text">SUBMIT</p></button>
             </div></div>
@@ -434,5 +440,6 @@
         </div>
     </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
