@@ -159,5 +159,19 @@ slider.addEventListener('input', function() {
         }
     });
 });
-
+function shareOnWhatsApp() {
+    var urlToShare = encodeURIComponent(window.location.href);
+    var whatsappShareLink = 'https://web.whatsapp.com/send?text=' + urlToShare;
+    window.open(whatsappShareLink, '_blank');
+}
+function shareOnFacebook() {
+    var urlToShare = encodeURIComponent(window.location.href);
+    var facebookShareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + urlToShare;
+    window.open(facebookShareLink, '_blank');
+}
+function shareOnTwitter() {
+    var urlToShare = encodeURIComponent(window.location.href);
+    var twitterShareLink = 'https://twitter.com/intent/tweet?url=' + urlToShare;
+    window.open(twitterShareLink, '_blank');
+}
 
