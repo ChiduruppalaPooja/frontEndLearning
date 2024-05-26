@@ -824,11 +824,11 @@ outline: none;
     text-align: center;
 }
 
-body.dark-mode .pagination a,
-.pagination span {
+body.dark-mode .pagination a ,
+body.dark-mode .pagination span {
     margin: 0 5px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -840,6 +840,7 @@ body.dark-mode .pagination a,
     left: 57.5px;
     gap: 0;
 }
+
 
 .pagination a.active {
 
