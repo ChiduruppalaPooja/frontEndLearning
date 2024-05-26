@@ -144,3 +144,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+
+const slider = document.querySelector('.slider');
+
+slider.addEventListener('input', function() {
+    const newSize = this.value;
+    console.log(newSize);
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach(element => {
+        if (!element.classList.contains('group-1-technology') && !element.classList.contains('submit-text') && !element.classList.contains('email')) {
+            element.style.fontSize = `${newSize}px`;
+        }
+    });
+});
+
+

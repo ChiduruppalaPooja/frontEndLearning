@@ -62,6 +62,26 @@
                         <a href="#" class="share-link">Twitter</a>
                     </div>
                 </div>
+                <div class="slider-container">
+                    <div class="labels">
+                        <div class="label" style="font-size: 16px;" data-size="16">aA</div>
+                        <div class="label" style="font-size: 18px;" data-size="18">aA</div>
+                        <div class="label" style="font-size: 20px;" data-size="20">aA</div>
+                        <div class="label" style="font-size: 22px;" data-size="22">aA</div>
+                        <div class="label" style="font-size: 24px;" data-size="24">aA</div>
+                    </div>
+                    <div class="track"></div>
+                    <div class="tick-marks" id="tickMarks">
+                        <div class="tick" data-size="16" onclick="setFontSize(this)"></div>
+                        <div class="tick" data-size="18" onclick="setFontSize(this)"></div>
+                        <div class="tick" data-size="20" onclick="setFontSize(this)"></div>
+                        <div class="tick" data-size="22" onclick="setFontSize(this)"></div>
+                        <div class="tick" data-size="24" onclick="setFontSize(this)"></div>
+                    </div>
+                    
+                    <input type="range" min="10" max="30" value="16" step="1" class="slider" data-size="16">
+
+                </div>
             </div>
             <img src="./image/Image placeholder.png" alt="" class="article-img">
             <div class="description">
