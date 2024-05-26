@@ -407,7 +407,7 @@ text-align: left;
 .footer-frame {
     gap: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
    padding:  100px 220px 100px 220px
 }
 

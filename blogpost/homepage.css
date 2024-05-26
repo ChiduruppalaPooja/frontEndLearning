@@ -350,7 +350,16 @@ body.dark-mode .group-1-rectangle {
     gap: 60px;
 }
 
-.posts-frame {
+.posts-frame-trending  {
+
+ 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 60px;
+    
+
+}
+.related-posts-frame {
 
     gap: 30px;
     display: flex;
@@ -368,7 +377,7 @@ body.dark-mode .group-1-rectangle {
 
 .related-posts-img {
     width: 100%;
-    height: auto;
+    height: 300px;
     gap: 0px;
     border-radius: 17px;
 
@@ -504,7 +513,7 @@ body.dark-mode .group-1-rectangle {
     gap: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* Responsive grid */
+  
 
 }
 
