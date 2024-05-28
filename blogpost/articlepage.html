@@ -10,6 +10,10 @@
 </head>
 
 <body class="light-mode">
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div class="loader-text">Loading</div>
+    </div>
     <div class="article-page">
         <div class="top-bar">
             <div class="top-frame">
@@ -21,9 +25,9 @@
                     <h3 class="technology content">Technology</h3>
                     <img src="./image/Search outlined.png" alt="" class="search" id="searchIcon">
                     <div class="search-popup" id="searchPopup">
-                    <input type="text" placeholder="Search..." id="searchInput" class="search-text">
-                    <button onclick="performSearch()" class="search-button">Search</button>
-                </div>
+                        <input type="text" placeholder="Search..." id="searchInput" class="search-text">
+                        <button onclick="performSearch()" class="search-button">Search</button>
+                    </div>
                 </div>
                 <img src="./image/Menu outlined.png" alt="" class="menu">
             </div>
@@ -34,41 +38,43 @@
                 <div class="arrowhead"></div>
                 <h3 class="back">Back</h3>
             </div>
-            <h1 class="anima">
-                Anima Introduces: Hotspots Hints
+            <h1 class="anima change" id="main-title">
             </h1>
             <div class="profile-frame">
-                <img src="./image/Image.png" alt="" class="profile">
+                <div class="about-profile">
+                <img src="" alt="" class="profile" id="authorImage">
                 <div class="details">
                     <div class="personal-detail">
-                        <p class="name">Full Name</p>
+                        <p class="name change" id="author"></p>
                         <div class="divider"></div>
-                        <p class="name">Job Title</p>
+                        <p class="name change" id="jobTitle"></p>
                         <div class="divider"></div>
                     </div>
                     <div class="personal-detail">
-                        <p class="name">May 24,2022</p>
+                        <p class="name change" id="date"></p>
                         <div class="divider"></div>
-                        <p class="name">4 min read</p>
+                        <p class="name change" id="readTime"></p>
                         <div class="divider"></div>
                     </div>
                 </div>
+            </div>
                 <div class="share-container">
                     <img src="./image/share.png" alt="Share" class="share-icon" onclick="togglePopup()">
                     <div class="share-popup" id="sharePopup">
-                        <a href="#" class="share-link" onclick="shareOnWhatsApp()">Whatsapp</a>
-                        <a href="#" class="share-link">Instagram</a>
-                        <a href="#" class="share-link" onclick="shareOnFacebook()">Facebook</a>
-                        <a href="#" class="share-link" onclick="shareOnTwitter()">Twitter</a>
+                        <a href="#" class="share-link change" onclick="shareOnWhatsApp()">Whatsapp</a>
+                        <a href="#" class="share-link change">Instagram</a>
+                        <a href="#" class="share-link change" onclick="shareOnFacebook()">Facebook</a>
+                        <a href="#" class="share-link change" onclick="shareOnTwitter()">Twitter</a>
                     </div>
                 </div>
+            
                 <div class="slider-container">
                     <div class="labels">
-                        <div class="label" style="font-size: 16px;" data-size="16">aA</div>
-                        <div class="label" style="font-size: 18px;" data-size="18">aA</div>
-                        <div class="label" style="font-size: 20px;" data-size="20">aA</div>
-                        <div class="label" style="font-size: 22px;" data-size="22">aA</div>
-                        <div class="label" style="font-size: 24px;" data-size="24">aA</div>
+                        <div class="label" style="font-size: 12px;" data-size="16">aA</div>
+                        <div class="label" style="font-size: 16px;" data-size="18">aA</div>
+                        <div class="label" style="font-size: 24px;" data-size="20">aA</div>
+                        <div class="label" style="font-size: 28px;" data-size="22">aA</div>
+                        <div class="label" style="font-size: 32px;" data-size="24">aA</div>
                     </div>
                     <div class="track"></div>
                     <div class="tick-marks" id="tickMarks">
@@ -78,22 +84,21 @@
                         <div class="tick" data-size="22" onclick="setFontSize(this)"></div>
                         <div class="tick" data-size="24" onclick="setFontSize(this)"></div>
                     </div>
-                    
-                    <input type="range" min="10" max="30" value="16" step="1" class="slider" data-size="16">
+
+                    <input type="range" min="10" max="30" value="16" step="4" class="slider" data-size="16">
 
                 </div>
             </div>
-            <img src="./image/Image placeholder.png" alt="" class="article-img">
+            <img src="" alt="" class="article-img" id="main-img">
+
             <div class="description">
                 <div class="description-frame">
-                    <p class="about">Hotspot Hints Help Guide Users Navigate Through a Prototype, Anima allows designers
-                        to create high-fidelity prototypes inside Sketch, Adobe XD, and Figma, and export HTML & CSS in
-                        a single click.</p>
+                    <p class="about change" id="about"></p>
                     <img src="./image/Link.png" alt="" class="learn-more">
                 </div>
                 <div class="group-1">
                     <div class="group-1-rectangle">
-                        <div class="group-1-technology">Technology</div>
+                        <div class="group-1-technology" id="category"></div>
                     </div>
                 </div>
             </div>
@@ -101,32 +106,10 @@
 
 
         <div class="Body">
-            <h2 class="body-title">
-                What Are Hotspots Hints?
+            <h2 class="body-title change" id="subheading">
             </h2>
-            <p class="body-para">
-                If your prototype has Links and you want to see where they are located during preview, toggle on the
-                Hotspots Hint preference.
-                These hints will highlight the clickable elements of your prototype when you click on something that is
-                NOT clickable and help those who are not familiar with the project to navigate through the prototype
-                with ease.
-                1. Toggle Hotspots On/Off
-                From your Anima Project’s page click on the “Run Prototype” preferences icon and toggle the switch on.
-                2. Re-sync your Design
-                In order for the Prototype Preferences to take action, the design needs to be re-synced.
-                Go back to your design program and click Preview in Browser on the Anima plugin and then Sync to
-                Project.
-                3. Run Prototype
-                Once the new Sync is up on the Anima Project’s page, click on Run Prototype, or go to the project’s
-                Public Link (Click Share > Enable Public Link).
-                Notice how the Links on your design are highlighted with a light blue Hotspot when you click anywhere on
-                the page that is not clickable.
-
-
-
-                What is Anima?
-                Anima is automating the design-to-code process, allowing designers to achieve more without learning to
-                code, and helping teams to deliver faster.
+            <p class="body-para change" id="content">
+            
             </p>
         </div>
         <div class="related-posts">
@@ -216,54 +199,68 @@
 
                 </div>
             </div>
-            </div>
-            <div class="footer">
-                <div class="posts-divider-footer"></div>
-                <div class="footer-frame">
-                    <div class="footer-frame-1">
-                        <div class="footer-logo">
-                            <h1 class="footer-logo-text">Blogful</h1>
+        </div>
+        <div class="footer">
+            <div class="posts-divider-footer"></div>
+            <div class="footer-frame">
+                <div class="footer-frame-1">
+                    <div class="footer-logo">
+                        <h1 class="footer-logo-text">Blogful</h1>
+                    </div>
+                    <div class="footer-list">
+                        <div class="footer-blog">
+                            <h1 class="blog-footer">Blogs</h1>
                         </div>
-                        <div class="footer-list">
-                            <div class="footer-blog"><h1 class="blog-footer">Blogs</h1></div>
-                            <div class="footer-contact"><h1 class="contact-footer">Contact</h1></div>
-                            <div class="footer-links"><h1 class="links-footer">Quick Links</h1></div>
+                        <div class="footer-contact">
+                            <h1 class="contact-footer">Contact</h1>
                         </div>
-                        <div class="mode"><h2 class="footer-mode">Light/dark mode</h2>
+                        <div class="footer-links">
+                            <h1 class="links-footer">Quick Links</h1>
+                        </div>
+                    </div>
+                    <div class="mode">
+                        <h2 class="footer-mode">Light/dark mode</h2>
                         <div class="group-4" onclick="toggleMode()">
                             <div class="rectangle-footer"></div>
-                                <div class="elipse"></div>
-                            
+                            <div class="elipse"></div>
+
                         </div>
                     </div>
-                    </div>
-                    <div class="footer-frame-2">
-                        <div class="subscribe"><h1 class="subscribe-text">Subscribe for Newsletter</h1>
-                        <div class="subtitle"><p class="subtitle-text">Get our hand-picked discoveries & articles delivered right to your inbox.</p></div>
+                </div>
+                <div class="footer-frame-2">
+                    <div class="subscribe">
+                        <h1 class="subscribe-text">Subscribe for Newsletter</h1>
+                        <div class="subtitle">
+                            <p class="subtitle-text">Get our hand-picked discoveries & articles delivered right to your
+                                inbox.</p>
+                        </div>
                         <div class="group-3">
                             <div class="email-box">
                                 <input type="text" class="email" placeholder="Email address">
                             </div>
-                            <button class="submit"><p class="submit-text">SUBMIT</p></button>
-                        </div></div>
-                    
-                        <div class="follow">
-                            <h1 class="follow-on">Follow On</h1>
-                            <div class="follow-links">
-                                <img src="./image/Discord.png" alt="" class="discord social">
-                                <img src="./image/Facebook.png" alt="" class="facebook social">
-                                <img src="./image/Dribbble.png" alt="" class="dribble social">
-                                <img src="./image/instagram.jpg" alt="" class="instagram social">
-                                <img src="./image/Behance.png" alt="" class="behance social">
-                            </div>
+                            <button class="submit">
+                                <p class="submit-text">SUBMIT</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="follow">
+                        <h1 class="follow-on">Follow On</h1>
+                        <div class="follow-links">
+                            <img src="./image/Discord.png" alt="" class="discord social">
+                            <img src="./image/Facebook.png" alt="" class="facebook social">
+                            <img src="./image/Dribbble.png" alt="" class="dribble social">
+                            <img src="./image/instagram.jpg" alt="" class="instagram social">
+                            <img src="./image/Behance.png" alt="" class="behance social">
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
-        <script src="script.js"></script>
-        <script src="articlepage.js"></script>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="articlepage.js"></script>
 </body>
 
 </html>
