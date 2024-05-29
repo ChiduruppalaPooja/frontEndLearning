@@ -831,6 +831,9 @@ body.dark-mode .pagination span {
 
     border: 2px solid #1976D2;
     opacity: 1;
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
 }
 
 .posts-divider-footer {

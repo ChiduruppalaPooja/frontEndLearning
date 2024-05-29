@@ -3,12 +3,12 @@
 const slider = document.querySelector('.slider');
 let storedData = sessionStorage.getItem('postData');
 
-// Check if storedData is null and parse it if not
+
 if (storedData && storedData !== "undefined") {
     storedData = JSON.parse(storedData);
   
 } else {
-    // If postData is not available, look for newdata
+    
     storedData = sessionStorage.getItem('newdata');
     
    
@@ -129,7 +129,7 @@ $(document).ready(function () {
                 scrollTop: targetPost.offset().top
             }, 1000); 
         } else {
-            alert("No posts found in the " + category + " category");
+            window.location.href = 'home.html';
         }
     });
 });
@@ -186,7 +186,9 @@ document.addEventListener("DOMContentLoaded", function () {
         posts.forEach(post => {
             const listItem = document.createElement('li');
             const title = document.createElement('strong');
-            title.textContent = post.title;
+            title.textContent = post.title.trim(); // Use trim() to remove whitespace
+
+           
             const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' '));
             listItem.appendChild(title);
             listItem.appendChild(content);
