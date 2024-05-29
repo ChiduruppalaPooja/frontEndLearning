@@ -322,12 +322,10 @@ window.onclick = function (event) {
 document.addEventListener('DOMContentLoaded', function () {
 
     const loadingScreen = document.getElementById('loading-screen');
-    const topBar =  document.getElementsByClassName('top-bar');
-    const topframe =  document.getElementsByClassName('top-frame');
+  
     setTimeout(function () {
         loadingScreen.style.display = 'flex';
-        topBar.style.display = 'none';
-        topframe.style.display = 'none';
+        
         
     }, 10);
 
@@ -463,11 +461,13 @@ document.addEventListener("DOMContentLoaded", function () {
             listItem.appendChild(content);
             resultList.appendChild(listItem);
 
-
+            const postId = post.id;
+            console.log(postId);
             listItem.addEventListener('click', function () {
-                const postId = post.id;
+                console.log(postId);
+
                 const post = blogPosts.find(post => post.id === parseInt(postId));
-            console.log(post);
+            
             sessionStorage.setItem('postData', JSON.stringify(post));
                 const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
 
