@@ -259,7 +259,7 @@ var blogPosts = [
 
 ];
 
-
+sessionStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
 document.addEventListener("DOMContentLoaded", function () {
     const postsPerPage = 6;
@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const post = blogPosts.find(post => post.id === parseInt(postId));
             console.log(post);
             sessionStorage.setItem('postData', JSON.stringify(post));
-            const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
+            const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
             window.location.href = url;
         }
 
@@ -492,4 +492,4 @@ function generateRelatedPostHTML(post) {
         </div>`;
 }
 
-sessionStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+
