@@ -16,7 +16,7 @@ var blogPosts = [
     ,
     {
         id: 2,
-        authorImage: 'https://images.unsplash.com/photo-1500631713187-e837c85fca02',
+        authorImage: './image/img4.jpeg',
         image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
         category: "Technology",
         author: "John Doe",
@@ -46,7 +46,7 @@ var blogPosts = [
     ,
     {
         id: 4,
-        authorImage: 'https://images.unsplash.com/photo-1500631713187-e837c85fca02',
+        authorImage: './image/img5.jpeg',
         image: 'https://images.unsplash.com/photo-1503264116251-35a269479413',
         category: "Ideas",
         author: "Liam Jackson",
@@ -63,7 +63,7 @@ var blogPosts = [
         id: 5,
         authorImage: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8',
         image: 'https://images.unsplash.com/photo-1502673530728-f79b4cab31b1',
-        category: "Technology",
+        category: "Culture",
         author: "Michael Brown",
         jobTitle: "Data Scientist",
         readTime: "7 min read",
@@ -76,9 +76,9 @@ var blogPosts = [
     ,
     {
         id: 6,
-        authorImage: 'https://images.unsplash.com/photo-1522098543979-ffc7ed26b132',
-        image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
-        category: "Technology",
+        authorImage: './image/img1.jpeg',
+        image: './image/blg3.jpeg',
+        category: "Culture",
         author: "Sarah Davis",
         jobTitle: "Product Manager",
         readTime: "6 min read",
@@ -91,7 +91,7 @@ var blogPosts = [
     ,
     {
         id: 7,
-        authorImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb',
+        authorImage: './image/img2.jpeg',
         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
         category: "Technology",
         author: "David Wilson",
@@ -106,8 +106,8 @@ var blogPosts = [
     ,
     {
         id: 8,
-        authorImage: 'https://images.unsplash.com/photo-1502791451868-a6c5d6bc55f0',
-        image: 'https://images.unsplash.com/photo-1524633710998-d548fe0f6d32',
+        authorImage: './image/img5.jpeg',
+        image: './image/blg4.jpeg',
         category: "Technology",
         author: "Laura Miller",
         jobTitle: "AI Researcher",
@@ -182,7 +182,7 @@ var blogPosts = [
     , {
         id: 13,
         authorImage: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce',
-        image: 'https://images.unsplash.com/photo-1503414920192-c372af38141c',
+        image: './image/blg2.jpeg',
         category: "Ideas",
         author: "Ethan Johnson",
         jobTitle: "Product Manager",
@@ -210,7 +210,7 @@ var blogPosts = [
     {
         id: 15,
         authorImage: 'https://images.unsplash.com/photo-1505692957-f69f0bfc5f8f',
-        image: 'https://images.unsplash.com/photo-1532545891563-b158ef390fdd',
+        image: './image/blg1.jpeg',
         category: "Ideas",
         author: "Ava Martinez",
         jobTitle: "Strategic Planner",
@@ -224,7 +224,7 @@ var blogPosts = [
     {
         id: 16,
         authorImage: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66',
-        image: 'https://images.unsplash.com/photo-1516146544198-567184d9ab5c',
+        image: './image/blg4.jpeg',
         category: "Ideas",
         author: "William Lee",
         jobTitle: "Innovation Consultant",
@@ -237,7 +237,7 @@ var blogPosts = [
     },
     {
         id: 17,
-        authorImage: 'https://images.unsplash.com/photo-1502767089025-6572583495b3',
+        authorImage: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8',
         image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e',
         category: "Ideas",
         author: "Charlotte Brown",
@@ -249,220 +249,331 @@ var blogPosts = [
         subheading: "A flexible approach",
         content: "Agile methodology is a flexible approach to project management that emphasizes collaboration, customer feedback, and iterative development. This article explains the principles of agile methodology and how it can be used to deliver successful projects."
     },
-
-
-
-
-
-
+    {
+        id: 18,
+        authorImage: './image/img1.jpeg',
+        image:  './image/blg1.jpeg',
+        category: "Ideas",
+        author: "David Lee",
+        jobTitle: "Innovation Consultant",
+        readTime: "7 min read",
+        date: "November 5, 2024",
+        title: "The Art of Creative Problem-Solving: Unlocking Solutions Through Innovation",
+        text: "Exploring how creativity and innovation can be leveraged to solve complex problems effectively.",
+        subheading: "Harnessing Creativity for Problem-Solving",
+        content: "Creativity is a powerful tool for tackling challenges and finding innovative solutions. This article dives deep into the art of creative problem-solving, discussing methodologies such as design thinking, lateral thinking, and reframing problems. Learn how embracing creativity can unlock new perspectives and lead to breakthrough solutions in various domains."
+    },
+    {
+        id: 19,
+        authorImage: './image/img2.jpeg',
+        image: './image/blg2.jpeg',
+        category: "Ideas",
+        author: "Jane Smith",
+        jobTitle: "Creative Consultant",
+        readTime: "5 min read",
+        date: "September 10, 2024",
+        title: "Innovative Thinking: Nurturing a Culture of Idea Generation",
+        text: "Exploring strategies to foster innovative thinking and encourage the generation of new ideas.",
+        subheading: "The Power of Idea Generation",
+        content: "Innovation thrives in environments that encourage creative thinking. This article dives into various techniques and approaches to cultivate a culture of idea generation within organizations. From brainstorming sessions to interdisciplinary collaboration, discover how nurturing innovative thinking can drive progress and success."
+    },
+    {
+        id: 20,
+         authorImage: './image/img3.jpeg',
+        image: './image/blg3.jpeg',
+        category: "Culture",
+        author: "Sophia Clark",
+        jobTitle: "Cultural Analyst",
+        readTime: "7 min read",
+        date: "March 20, 2025",
+        title: "Traditional Clothing: Symbols of Cultural Identity",
+        text: "Understanding the significance of traditional attire in various cultures.",
+        subheading: "Threads of Tradition",
+        content: "Traditional clothing is more than just fabric; it is a symbol of cultural identity and heritage. This article explores the significance of traditional attire in different cultures, the meanings behind various garments, and their role in preserving cultural history."
+    },
+    {
+        id: 21,
+        authorImage: './image/img4.jpeg',
+        image: './image/blg4.jpeg',
+        category: "Culture",
+        author: "Emily Green",
+        jobTitle: "Cultural Curator",
+        readTime: "6 min read",
+        date: "February 14, 2025",
+        title: "The Culinary Heritage of Different Cultures",
+        text: "A culinary journey through traditional dishes and their cultural significance.",
+        subheading: "Flavors of Heritage",
+        content: "Food is a fundamental aspect of cultural heritage, reflecting history, geography, and traditions. This article takes readers on a culinary journey, exploring traditional dishes from various cultures and the stories they tell about their origins and cultural importance."
+    },
+    {
+        id: 22,
+        authorImage: './image/img5.jpeg',
+        image: './image/blg3.jpeg',
+        category: "Culture",
+        author: "David Wilson",
+        jobTitle: "Cultural Studies Professor",
+        readTime: "8 min read",
+        date: "January 10, 2025",
+        title: "Language Preservation: Protecting Our Linguistic Heritage",
+        text: "The efforts to save endangered languages around the world.",
+        subheading: "Words of Wisdom",
+        content: "Languages are a crucial part of cultural identity, yet many are at risk of extinction. This article examines the initiatives being undertaken to preserve endangered languages, the challenges faced, and the importance of linguistic diversity for cultural richness."
+    },
 
 
 ];
 
 sessionStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
-document.addEventListener("DOMContentLoaded", function () {
-    const postsPerPage = 6;
-    const totalPages = Math.ceil(blogPosts.length / postsPerPage);
-    let currentPage = 1;
 
-    function renderPosts(page) {
-        const startIndex = (page - 1) * postsPerPage;
-        const endIndex = Math.min(startIndex + postsPerPage, blogPosts.length);
-        const postsFrame = document.querySelector('.posts-frame-trending');
-
-        postsFrame.innerHTML = '';
-
-        for (let i = startIndex; i < endIndex; i++) {
-            const post = blogPosts[i];
-            const blogPostFrame = document.createElement('div');
-            blogPostFrame.setAttribute('data-category', post.category);
-            blogPostFrame.className = 'blogpost';
-            blogPostFrame.id = post.id;
-            const relatedPostsFrame = document.createElement('div');
-            relatedPostsFrame.className = 'related-posts-frame';
-            const img = document.createElement('img');
-            img.className = 'related-posts-img';
-            img.src = post.image;
-            img.alt = 'Blog Post Image';
-            const info = document.createElement('div');
-            info.className = 'info';
-            const rectangle = document.createElement('div');
-            rectangle.className = 'group-1-rectangle';
-            const category = document.createElement('div');
-            category.className = 'group-1-technology';
-            category.textContent = post.category;
-            const profile = document.createElement('div');
-            profile.className = 'profile-frame';
-            const details = document.createElement('div');
-            details.className = 'details';
-            const personalDetail1 = document.createElement('div');
-            personalDetail1.className = 'personal-detail';
-            personalDetail1.innerHTML = `<p class="name">${post.author}</p><div class="divider"></div><p class="name">${post.jobTitle}</p><div class="divider"></div><p class="name">${post.readTime}</p>`;
-            const personalDetail2 = document.createElement('div');
-            personalDetail2.className = 'personal-detail';
-            personalDetail2.innerHTML = `<p class="name">${post.date}</p><div class="divider"></div>`;
-            const title = document.createElement('h3');
-            title.className = 'related-posts-title';
-            title.textContent = post.title;
-            const text = document.createElement('p');
-            text.className = 'related-post-text';
-            text.textContent = post.text;
-
-            details.appendChild(personalDetail1);
-            details.appendChild(personalDetail2);
-            profile.appendChild(details);
-            rectangle.appendChild(category);
-            info.appendChild(rectangle);
-            info.appendChild(profile);
-            info.appendChild(title);
-            info.appendChild(text);
-            relatedPostsFrame.appendChild(img);
-            relatedPostsFrame.appendChild(info);
-            blogPostFrame.appendChild(relatedPostsFrame);
-            postsFrame.appendChild(blogPostFrame);
+//clicking on All
+var contentElements = document.getElementsByClassName('all');
+for (var i = 0; i < contentElements.length; i++) {
+    contentElements[i].addEventListener('click', function () {
+        var targetElement = document.getElementById('trending-topics');
+        if (!targetElement) {
+            targetElement = document.getElementById('posts-related');
         }
-    }
-
-    function renderPagination() {
-        const pagination = document.querySelector('.pagination');
-        const prevButton = pagination.querySelector('.prev');
-        const nextButton = pagination.querySelector('.next');
-        const ellipsis = pagination.querySelector('.ellipsis');
-        const pageLinks = Array.from(pagination.querySelectorAll('.page'));
-        const visiblePages = 5;
-        let currentPageSet = 0;
-
-        function updatePageLinks(startPage) {
-            const endPage = startPage + visiblePages - 1;
-            pageLinks.forEach((pageLink, index) => {
-                if (index < visiblePages && startPage + index <= totalPages) {
-                    pageLink.textContent = startPage + index;
-                    pageLink.style.display = 'inline-block';
-                } else {
-                    pageLink.style.display = 'none';
-                }
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
             });
-            ellipsis.style.display = endPage < totalPages - 1 ? 'inline-block' : 'none';
-            pageLinks[pageLinks.length - 1].style.display = endPage < totalPages - 1 ? 'inline-block' : 'none';
-            pageLinks[pageLinks.length - 1].textContent = totalPages;
-            pageLinks.forEach(pageLink => pageLink.classList.remove('active'));
-            if (currentPage >= startPage && currentPage <= endPage) {
-                pageLinks[currentPage - startPage].classList.add('active');
-            } else if (currentPage === totalPages) {
-                pageLinks[pageLinks.length - 1].classList.add('active');
-            }
+        } else {
+            console.error("Neither 'trending-topics' nor 'posts-related' element found.");
         }
+    });
+}
 
-        pageLinks.forEach(pageLink => {
-            pageLink.addEventListener('click', function (event) {
-                event.preventDefault();
-                currentPage = parseInt(this.textContent);
-                updatePageLinks(currentPageSet + 1);
-                renderPosts(currentPage);
-                attachPostClickListeners();
-            });
-        });
+//other links in top bar
 
-        ellipsis.addEventListener('click', function (event) {
-            event.preventDefault();
-            currentPageSet += visiblePages;
-            if (currentPageSet + visiblePages >= totalPages) {
-                currentPageSet = totalPages - visiblePages;
-            }
-            updatePageLinks(currentPageSet + 1);
-            attachPostClickListeners();
-        });
+$(document).ready(function () {
+    $('.category-link').on('click', function () {
+        var category = $(this).data('category');
 
-        prevButton.addEventListener('click', function (event) {
-            event.preventDefault();
-            if (currentPage > 1) {
-                currentPage--;
-                if (currentPage < currentPageSet + 1) {
-                    currentPageSet -= visiblePages;
-                    if (currentPageSet < 0) currentPageSet = 0;
-                }
-                updatePageLinks(currentPageSet + 1);
-                renderPosts(currentPage);
-                attachPostClickListeners();
-            }
-        });
+        var targetPost = $('.blogpost[data-category="' + category + '"]').first();
 
-        nextButton.addEventListener('click', function (event) {
-            event.preventDefault();
-            if (currentPage < totalPages) {
-                currentPage++;
-                if (currentPage > currentPageSet + visiblePages) {
-                    currentPageSet += visiblePages;
-                }
-                updatePageLinks(currentPageSet + 1);
-                renderPosts(currentPage);
-                attachPostClickListeners();
-            }
-        });
 
-        function handlePostClick(event) {
-            const postId = event.currentTarget.id;
-            const post = blogPosts.find(post => post.id === parseInt(postId));
-            console.log(post);
-            sessionStorage.setItem('postData', JSON.stringify(post));
-            const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
-            window.location.href = url;
+        if (targetPost.length) {
+
+            $('html, body').animate({
+                scrollTop: targetPost.offset().top - 20
+            }, 1000);
+        } else {
+            window.location.href = 'home.html';
         }
-
-        function attachPostClickListeners() {
-            const postElements = document.querySelectorAll('.blogpost');
-            postElements.forEach(post => {
-                console.log('attached')
-                post.addEventListener('click', handlePostClick);
-            });
-        }
-
-        function appendRelatedPosts(relatedPosts, containerId) {
-            const container = document.getElementById(containerId);
-            relatedPosts.forEach(post => {
-                const postHTML = generateRelatedPostHTML(post);
-                container.innerHTML += postHTML;
-            });
-            attachPostClickListenersToRelatedPosts(); 
-        }
-
-        function attachPostClickListenersToRelatedPosts() {
-            const relatedPostElements = document.querySelectorAll(' .trends');
-            console.log('attached')
-            relatedPostElements.forEach(post => {
-                console.log(post);
-                post.addEventListener('click', function (event) {
-                    console.log('clicked');
-                    const postId = event.currentTarget.getAttribute('data-id');
-                    console.log(postId);
-                    const postData = blogPosts.find(post => post.id === parseInt(postId));
-                    
-                    const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost//articlepage.html?id=${postId}`;
-                    // window.location.href = url;
-                    sessionStorage.setItem('newdata', JSON.stringify(postData));
-                    
-                   
-                });
-            });
-        }
-
-        
-
-        const trendingPosts = [blogPosts[5], blogPosts[6]];
-
-        appendRelatedPosts(trendingPosts, 'posts-related');
-        updatePageLinks(1);
-        attachPostClickListeners();
-    }
-
-    renderPosts(1);
-    renderPagination();
-    attachPostClickListeners();
+    });
 });
 
-function generateRelatedPostHTML(post) {
-    return `
+
+
+
+
+    //trendingposts
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const postsPerPage = 6;
+        const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+        let currentPage = 1;
+
+        function renderPosts(page) {
+            const startIndex = (page - 1) * postsPerPage;
+            const endIndex = Math.min(startIndex + postsPerPage, blogPosts.length);
+            const postsFrame = document.querySelector('.posts-frame-trending');
+
+            postsFrame.innerHTML = '';
+
+            for (let i = startIndex; i < endIndex; i++) {
+                const post = blogPosts[i];
+                const blogPostFrame = document.createElement('div');
+                blogPostFrame.setAttribute('data-category', post.category);
+                blogPostFrame.className = 'blogpost';
+                blogPostFrame.id = post.id;
+                const relatedPostsFrame = document.createElement('div');
+                relatedPostsFrame.className = 'related-posts-frame';
+                const img = document.createElement('img');
+                img.className = 'related-posts-img';
+                img.src = post.image;
+                img.alt = 'Blog Post Image';
+                const info = document.createElement('div');
+                info.className = 'info';
+                const rectangle = document.createElement('div');
+                rectangle.className = 'group-1-rectangle';
+                const category = document.createElement('div');
+                category.className = 'group-1-technology';
+                category.textContent = post.category;
+                const profile = document.createElement('div');
+                profile.className = 'profile-frame';
+                const details = document.createElement('div');
+                details.className = 'details';
+                const personalDetail1 = document.createElement('div');
+                personalDetail1.className = 'personal-detail';
+                personalDetail1.innerHTML = `<p class="name">${post.author}</p><div class="divider"></div><p class="name">${post.jobTitle}</p><div class="divider"></div><p class="name">${post.readTime}</p>`;
+                const personalDetail2 = document.createElement('div');
+                personalDetail2.className = 'personal-detail';
+                personalDetail2.innerHTML = `<p class="name">${post.date}</p><div class="divider"></div>`;
+                const title = document.createElement('h3');
+                title.className = 'related-posts-title';
+                title.textContent = post.title;
+                const text = document.createElement('p');
+                text.className = 'related-post-text';
+                text.textContent = post.text;
+
+                details.appendChild(personalDetail1);
+                details.appendChild(personalDetail2);
+                profile.appendChild(details);
+                rectangle.appendChild(category);
+                info.appendChild(rectangle);
+                info.appendChild(profile);
+                info.appendChild(title);
+                info.appendChild(text);
+                relatedPostsFrame.appendChild(img);
+                relatedPostsFrame.appendChild(info);
+                blogPostFrame.appendChild(relatedPostsFrame);
+                postsFrame.appendChild(blogPostFrame);
+            }
+        }
+
+        function renderPagination() {
+            const pagination = document.querySelector('.pagination');
+            const prevButton = pagination.querySelector('.prev');
+            const nextButton = pagination.querySelector('.next');
+            const ellipsis = pagination.querySelector('.ellipsis');
+            const pageLinks = Array.from(pagination.querySelectorAll('.page'));
+            const visiblePages = 5;
+            let currentPageSet = 0;
+
+            function updatePageLinks(startPage) {
+                const endPage = startPage + visiblePages - 1;
+                pageLinks.forEach((pageLink, index) => {
+                    if (index < visiblePages && startPage + index <= totalPages) {
+                        pageLink.textContent = startPage + index;
+                        pageLink.style.display = 'inline-block';
+                    } else {
+                        pageLink.style.display = 'none';
+                    }
+                });
+                ellipsis.style.display = endPage < totalPages - 1 ? 'inline-block' : 'none';
+                pageLinks[pageLinks.length - 1].style.display = endPage < totalPages - 1 ? 'inline-block' : 'none';
+                pageLinks[pageLinks.length - 1].textContent = totalPages;
+                pageLinks.forEach(pageLink => pageLink.classList.remove('active'));
+                if (currentPage >= startPage && currentPage <= endPage) {
+                    pageLinks[currentPage - startPage].classList.add('active');
+                } else if (currentPage === totalPages) {
+                    pageLinks[pageLinks.length - 1].classList.add('active');
+                }
+            }
+
+            pageLinks.forEach(pageLink => {
+                pageLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    currentPage = parseInt(this.textContent);
+                    updatePageLinks(currentPageSet + 1);
+                    renderPosts(currentPage);
+                    attachPostClickListeners();
+                });
+            });
+
+            ellipsis.addEventListener('click', function (event) {
+                event.preventDefault();
+                currentPageSet += visiblePages;
+                if (currentPageSet + visiblePages >= totalPages) {
+                    currentPageSet = totalPages - visiblePages;
+                }
+                updatePageLinks(currentPageSet + 1);
+                attachPostClickListeners();
+            });
+
+            prevButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                if (currentPage > 1) {
+                    currentPage--;
+                    if (currentPage < currentPageSet + 1) {
+                        currentPageSet -= visiblePages;
+                        if (currentPageSet < 0) currentPageSet = 0;
+                    }
+                    updatePageLinks(currentPageSet + 1);
+                    renderPosts(currentPage);
+                    attachPostClickListeners();
+                }
+            });
+
+            nextButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    if (currentPage > currentPageSet + visiblePages) {
+                        currentPageSet += visiblePages;
+                    }
+                    updatePageLinks(currentPageSet + 1);
+                    renderPosts(currentPage);
+                    attachPostClickListeners();
+                }
+            });
+
+            function handlePostClick(event) {
+                const postId = event.currentTarget.id;
+                const post = blogPosts.find(post => post.id === parseInt(postId));
+                console.log(post);
+                sessionStorage.setItem('postData', JSON.stringify(post));
+                const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
+                window.location.href = url;
+            }
+
+            function attachPostClickListeners() {
+                const postElements = document.querySelectorAll('.blogpost');
+                postElements.forEach(post => {
+                    console.log('attached')
+                    post.addEventListener('click', handlePostClick);
+                });
+            }
+
+
+            //t
+            function appendRelatedPosts(relatedPosts, containerId) {
+                const container = document.getElementById(containerId);
+                relatedPosts.forEach(post => {
+                    const postHTML = generateRelatedPostHTML(post);
+                    container.innerHTML += postHTML;
+                });
+                attachPostClickListenersToRelatedPosts();
+            }
+
+            function attachPostClickListenersToRelatedPosts() {
+                const relatedPostElements = document.querySelectorAll(' .trends');
+                console.log('attached')
+                relatedPostElements.forEach(post => {
+                    console.log(post);
+                    post.addEventListener('click', function (event) {
+                        console.log('clicked');
+                        const postId = event.currentTarget.getAttribute('data-id');
+                        console.log(postId);
+                        const postData = blogPosts.find(post => post.id === parseInt(postId));
+                        sessionStorage.setItem('newdata', JSON.stringify(postData));
+
+
+                    });
+                });
+            }
+
+
+
+            const trendingPosts = [blogPosts[5], blogPosts[6]];
+
+            appendRelatedPosts(trendingPosts, 'posts-related');
+            updatePageLinks(1);
+            attachPostClickListeners();
+        }
+
+        renderPosts(1);
+        renderPagination();
+        attachPostClickListeners();
+    });
+
+
+
+    //function for related posts
+    function generateRelatedPostHTML(post) {
+        return `
         <div class="blogpost trends" data-id="${post.id}">
             <div class="related-posts-frame">
                 <img src="${post.image}" alt="" class="related-posts-img">
@@ -490,25 +601,14 @@ function generateRelatedPostHTML(post) {
                 </div>
             </div>
         </div>`;
-}
-$(document).ready(function () {
-    $('.category-link').on('click', function () {
-        var category = $(this).data('category'); 
+    }
 
-        var targetPost = $('.blogpost[data-category="' + category + '"]').first();
 
-      
-        if (targetPost.length) {
-            
-            $('html, body').animate({
-                scrollTop: targetPost.offset().top
-            }, 1000); 
-        } else {
-            window.location.href = 'home.html';
-        }
-    });
-});
 
+
+
+
+//search icon and its functionality
 document.addEventListener("DOMContentLoaded", function () {
     var searchIcon = document.getElementById('searchIcon');
     var searchPopup = document.getElementById('searchPopup');
@@ -533,10 +633,10 @@ document.addEventListener("DOMContentLoaded", function () {
             searchPopup.style.top = iconRect.bottom + 10 + 'px';
         }
 
-
-
-
     });
+
+
+    //searchButton
     document.getElementById('searchButton').addEventListener('click', function () {
         console.log('searchInput');
         const searchInput = document.getElementById('searchInput').value.toLowerCase();
@@ -552,33 +652,64 @@ document.addEventListener("DOMContentLoaded", function () {
         showSearchResultsPopup(matchingPosts.slice(0, 5));
     });
 
+
+
+    //search results
     function showSearchResultsPopup(posts) {
         const popupContainer = document.createElement('div');
         popupContainer.className = 'search-results-popup';
 
         const resultList = document.createElement('ul');
-
-        posts.forEach(post => {
-            const listItem = document.createElement('li');
-            const title = document.createElement('strong');
-            title.textContent = post.title.trim(); // Use trim() to remove whitespace
-
-           
-            const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' '));
-            listItem.appendChild(title);
-            listItem.appendChild(content);
-            resultList.appendChild(listItem);
-
-
-            listItem.addEventListener('click', function () {
+        if (posts.length === 0) {
+            const noResultMessage = document.createElement('li');
+            noResultMessage.textContent = 'No posts available';
+            resultList.appendChild(noResultMessage);
+        } else {
+            posts.forEach(post => {
+                const listItem = document.createElement('li');
+                const title = document.createElement('strong');
+                title.textContent = post.title.trim();
+    
+                const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' '));
+                listItem.appendChild(title);
+                listItem.appendChild(content);
+                resultList.appendChild(listItem);
+    
                 const postId = post.id;
                 console.log(postId);
-                const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
-
-                window.location.href = url;
+                listItem.addEventListener('click', function () {
+                    const postId = post.id;
+                    console.log('I am postId');
+                    console.log(postId);
+                    console.log(post);
+                    handleSearcResultdh(post);
+                });
+    
             });
+        }
 
-        });
+        // posts.forEach(post => {
+        //     const listItem = document.createElement('li');
+        //     const title = document.createElement('strong');
+        //     title.textContent = post.title.trim();
+
+
+        //     const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' '));
+        //     listItem.appendChild(title);
+        //     listItem.appendChild(content);
+        //     resultList.appendChild(listItem);
+
+
+        //     listItem.addEventListener('click', function () {
+        //         const postId = post.id;
+        //         console.log('I am postId');
+        //         console.log(postId);
+        //         console.log(post);
+        //         handleSearcResultdh(post);
+
+        //     });
+
+        // });
 
 
         popupContainer.appendChild(resultList);
@@ -587,5 +718,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById('searchInput');
         searchInput.parentNode.appendChild(popupContainer);
     }
-});
 
+
+    function handleSearcResultdh(post) {
+        const postId = post.id;
+        console.log('I am postId from function');
+        console.log(postId);
+        sessionStorage.setItem('postData', JSON.stringify(post));
+        const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
+        window.location.href = url;
+    }
+
+});
