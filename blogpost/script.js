@@ -23,31 +23,29 @@ function shareOnTwitter() {
 }
 
 
-
-
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var searchIcon = document.getElementById('searchIcon');
     var searchPopup = document.getElementById('searchPopup');
-    
-    searchIcon.addEventListener('click', function() {
+
+    searchIcon.addEventListener('click', function () {
         searchPopup.style.display = searchPopup.style.display === 'block' ? 'none' : 'block';
-        
+
         if (window.innerWidth <= 1170) {
-        var iconRect = searchIcon.getBoundingClientRect();
-        var popupWidth = searchPopup.offsetWidth;
-        var viewportWidth = window.innerWidth;
-        var popupLeft = iconRect.left + (iconRect.width - popupWidth) / 2;
+            var iconRect = searchIcon.getBoundingClientRect();
+            var popupWidth = searchPopup.offsetWidth;
+            var viewportWidth = window.innerWidth;
+            var popupLeft = iconRect.left + (iconRect.width - popupWidth) / 2;
 
 
-        if (popupLeft < 0) {
-            popupLeft = 0;
-        } else if (popupLeft + popupWidth > viewportWidth) {
-            popupLeft = viewportWidth - popupWidth;
+            if (popupLeft < 0) {
+                popupLeft = 0;
+            } else if (popupLeft + popupWidth > viewportWidth) {
+                popupLeft = viewportWidth - popupWidth;
+            }
+
+            searchPopup.style.left = popupLeft + 'px';
+            searchPopup.style.top = iconRect.bottom + 10 + 'px';
         }
-
-        searchPopup.style.left = popupLeft + 'px';
-        searchPopup.style.top = iconRect.bottom + 10 + 'px';
-    }
     });
 });
 
@@ -57,15 +55,25 @@ function shareOnTwitter() {
 //     });
 // });
 
-var contentElements = document.getElementsByClassName('content');
+
+
+
+var contentElements = document.getElementsByClassName('all');
 for (var i = 0; i < contentElements.length; i++) {
-    contentElements[i].addEventListener('click', function() {
-        document.getElementById('trending-topics').scrollIntoView({
-            behavior: 'smooth'
-        });
+    contentElements[i].addEventListener('click', function () {
+        var targetElement = document.getElementById('trending-topics');
+        if (!targetElement) {
+            targetElement = document.getElementById('posts-related');
+        }
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else {
+            console.error("Neither 'trending-topics' nor 'posts-related' element found.");
+        }
     });
 }
-
 
 
 

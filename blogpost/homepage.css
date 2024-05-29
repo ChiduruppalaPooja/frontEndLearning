@@ -412,7 +412,7 @@ body.dark-mode .group-1-rectangle {
 
 .cta {
     display: flex;
-    padding: 160px 400px 160px 400px;
+    padding: 160px 400px 160px 550px;
     gap: 10px;
 
 }
@@ -791,12 +791,17 @@ body.dark-mode .group-1-rectangle {
     justify-content: center;
     align-items: center;
     width: 23px;
-    height: 22.58px;
+    height: 24px;
     position: relative;
     top: 22.96px;
     left: 57.5px;
     gap: 0;
     text-align: center;
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18.9px;
+
 }
 
 body.dark-mode .pagination a,
@@ -809,17 +814,22 @@ body.dark-mode .pagination span {
     justify-content: center;
     align-items: center;
     width: 23px;
-    height: 22.58px;
+    height: 24px;
     position: relative;
     top: 22.96px;
     left: 57.5px;
     gap: 0;
+    text-align: center;
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18.9px;
 }
 
 
 .pagination a.active {
 
-    border: 1px solid #1976D2;
+    border: 2px solid #1976D2;
     opacity: 1;
 }
 
@@ -990,3 +1000,61 @@ body.dark-mode .pagination span {
 
 
 }
+
+/* Search results popup container */
+.search-results-popup {
+    position: absolute;
+    top: calc(100% + 5px); /* 5px below the search input */
+    right: 20%;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    width: 20%;
+}
+
+/* Search results list */
+.search-results-popup ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Search results list item */
+.search-results-popup li {
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-results-popup li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-results-popup li {
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ccc; /* Add a bottom border */
+}
+
+
+.lessthan,
+.greaterthan {
+    width: 8px;
+    height: 8px;
+    border-bottom: 3px solid black;
+    border-radius: 2px;
+    border-left: 3px solid black;
+    position: relative;
+    transform: rotate(45deg);
+
+}
+
+.greaterthan {
+    transform: rotate(225deg);
+}
+

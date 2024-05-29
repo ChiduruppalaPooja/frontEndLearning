@@ -7,6 +7,7 @@
     <title>Article Page</title>
     <link rel="stylesheet" href="articlepage.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="light-mode">
@@ -19,17 +20,17 @@
             <div class="top-frame">
                 <h3 class="title">Blogful</h3>
                 <div class="inner-frame">
-                    <h3 class="all content">All</h3>
-                    <h3 class="culture content">Culture</h3>
-                    <h3 class="ideas content">Ideas</h3>
-                    <h3 class="technology content">Technology</h3>
+                    <h3 class="all content " id="allLink" >All</h3>
+                    <h3 class="culture content category-link" id="cultureLink" data-category="Culture">Culture</h3>
+                    <h3 class="ideas content category-link" id="ideasLink" data-category="Ideas">Ideas</h3>
+                    <h3 class="technology content category-link" id="technologyLink" data-category="Technology">Technology</h3>
                     <img src="./image/Search outlined.png" alt="" class="search" id="searchIcon">
                     <div class="search-popup" id="searchPopup">
                         <input type="text" placeholder="Search..." id="searchInput" class="search-text">
-                        <button onclick="performSearch()" class="search-button">Search</button>
+                        <button class="search-button" id="searchButton">Search</button>
                     </div>
                 </div>
-                <img src="./image/Menu outlined.png" alt="" class="menu">
+                <!-- <img src="./image/Menu outlined.png" alt="" class="menu"> -->
             </div>
         </div>
         <div class="article-header">
@@ -120,81 +121,7 @@
                 <h2 class="related-posts-text">
                     Related posts
                 </h2>
-                <div class="posts">
-                    <div class="blogpost">
-                        <div class="related-posts-frame">
-                            <img src="./image/Image placeholder.png" alt="" class="related-posts-img">
-                            <div class="info">
-                                <div class="group-1">
-                                    <div class="group-1-rectangle">
-                                        <div class="group-1-technology">Technology</div>
-                                    </div>
-                                </div>
-                                <div class="profile-frame">
-                                    <div class="details">
-                                        <div class="personal-detail">
-                                            <p class="name">Full Name</p>
-                                            <div class="divider"></div>
-                                            <p class="name">Job Title</p>
-                                            <div class="divider"></div>
-                                            <p class="name">4 min read</p>
-                                        </div>
-                                        <div class="personal-detail">
-                                            <p class="name">May 24,2022</p>
-                                            <div class="divider"></div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="frame-322">
-                                    <h3 class="related-posts-title">
-                                        Write the blog post title right here
-                                    </h3>
-                                    <p class="related-post-text">
-                                        Write the blog description right here, Write the blog description right here,
-                                        Write the blog description right here.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blogpost">
-                        <div class="related-posts-frame">
-                            <img src="./image/Image placeholder.png" alt="" class="related-posts-img">
-                            <div class="info">
-                                <div class="group-1">
-                                    <div class="group-1-rectangle">
-                                        <div class="group-1-technology">Technology</div>
-                                    </div>
-                                </div>
-                                <div class="profile-frame">
-                                    <div class="details">
-                                        <div class="personal-detail">
-                                            <p class="name">Full Name</p>
-                                            <div class="divider"></div>
-                                            <p class="name">Job Title</p>
-                                            <div class="divider"></div>
-                                            <p class="name">4 min read</p>
-                                        </div>
-                                        <div class="personal-detail">
-                                            <p class="name">May 24,2022</p>
-                                            <div class="divider"></div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="frame-322">
-                                    <h3 class="related-posts-title">
-                                        Write the blog post title right here
-                                    </h3>
-                                    <p class="related-post-text">
-                                        Write the blog description right here, Write the blog description right here,
-                                        Write the blog description right here.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="posts" id="posts-related">
 
 
                 </div>
@@ -261,6 +188,7 @@
     </div>
     <script src="script.js"></script>
     <script src="articlepage.js"></script>
+    
 </body>
 
 </html>

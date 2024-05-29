@@ -1,5 +1,3 @@
-
-
 var blogPosts = [
     {
         id: 1,
@@ -151,7 +149,7 @@ var blogPosts = [
     }
     ,
     {
-
+        
         id: 11,
         authorImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
@@ -164,8 +162,8 @@ var blogPosts = [
         text: "How quantum computers are set to revolutionize technology.",
         subheading: "A new era of computing",
         content: "Quantum computing promises to solve problems that are currently intractable for classical computers. Learn about the principles of quantum computing and its potential impact on industries such as cryptography and material science."
-
-
+        
+        
     },
     {
         id: 12,
@@ -181,7 +179,7 @@ var blogPosts = [
         subheading: "The next generation of connectivity",
         content: "5G technology promises faster speeds and more reliable internet connections. In this article, we discuss the key benefits of 5G, the technology behind it, and the potential challenges in its widespread adoption."
     }
-    , {
+    ,{
         id: 13,
         authorImage: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce',
         image: 'https://images.unsplash.com/photo-1503414920192-c372af38141c',
@@ -251,12 +249,12 @@ var blogPosts = [
         subheading: "A flexible approach",
         content: "Agile methodology is a flexible approach to project management that emphasizes collaboration, customer feedback, and iterative development. This article explains the principles of agile methodology and how it can be used to deliver successful projects."
     },
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
 
 
 ];
@@ -280,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const startIndex = (page - 1) * postsPerPage;
         const endIndex = Math.min(startIndex + postsPerPage, blogPosts.length);
         const postsFrame = document.querySelector('.posts-frame-trending');
-
+        
         postsFrame.innerHTML = '';
 
         for (let i = startIndex; i < endIndex; i++) {
@@ -332,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
             blogPostFrame.appendChild(relatedPostsFrame);
             postsFrame.appendChild(blogPostFrame);
         }
-
+        
     }
 
     function renderPagination() {
@@ -363,7 +361,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (currentPage === totalPages) {
                 pageLinks[pageLinks.length - 1].classList.add('active');
             }
-
+            
         }
 
         pageLinks.forEach(pageLink => {
@@ -416,8 +414,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const postId = event.currentTarget.id;
             const post = blogPosts.find(post => post.id === parseInt(postId));
             console.log(post);
-
-            sessionStorage.setItem('postData', JSON.stringify(post));
+    
+            sessionStorage.setItem('postData', JSON.stringify(post)); 
             const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
             window.location.href = url;
         }
@@ -429,24 +427,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 post.addEventListener('click', handlePostClick);
             });
         }
-        trendingPosts = [
-            blogPosts[5], blogPosts[6]
-        ];
-
-        function appendRelatedPosts(relatedPosts, containerId) {
-            const container = document.getElementById(containerId);
-            relatedPosts.forEach(post => {
-                const postHTML = generateRelatedPostHTML(post);
-                container.innerHTML += postHTML;
-            });
-
-        }
-
-        appendRelatedPosts(trendingPosts, 'posts-related');
 
 
         updatePageLinks(1);
-        attachPostClickListeners();
+         attachPostClickListeners();
 
     }
 
@@ -456,128 +440,104 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-$(document).ready(function () {
-    $('.category-link').on('click', function () {
-        var category = $(this).data('category');
+$(document).ready(function(){
+    $('.category-link').on('click', function() {
+        var category = $(this).data('category'); // Get the category from the clicked link
 
-
+        // Find the first post with the matching data-category attribute
         var targetPost = $('.blogpost[data-category="' + category + '"]').first();
 
-
+        // Check if such a post exists
         if (targetPost.length) {
-
+            // Scroll to the first post with the matching category
             $('html, body').animate({
                 scrollTop: targetPost.offset().top
-            }, 1000);
+            }, 1000); // Duration of scroll in milliseconds
         } else {
             alert("No posts found in the " + category + " category");
         }
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     var searchIcon = document.getElementById('searchIcon');
     var searchPopup = document.getElementById('searchPopup');
-
-    searchIcon.addEventListener('click', function () {
+    
+    searchIcon.addEventListener('click', function() {
         searchPopup.style.display = searchPopup.style.display === 'block' ? 'none' : 'block';
-
+        
         if (window.innerWidth <= 1170) {
-            var iconRect = searchIcon.getBoundingClientRect();
-            var popupWidth = searchPopup.offsetWidth;
-            var viewportWidth = window.innerWidth;
-            var popupLeft = iconRect.left + (iconRect.width - popupWidth) / 2;
+        var iconRect = searchIcon.getBoundingClientRect();
+        var popupWidth = searchPopup.offsetWidth;
+        var viewportWidth = window.innerWidth;
+        var popupLeft = iconRect.left + (iconRect.width - popupWidth) / 2;
 
 
-            if (popupLeft < 0) {
-                popupLeft = 0;
-            } else if (popupLeft + popupWidth > viewportWidth) {
-                popupLeft = viewportWidth - popupWidth;
-            }
-
-            searchPopup.style.left = popupLeft + 'px';
-            searchPopup.style.top = iconRect.bottom + 10 + 'px';
+        if (popupLeft < 0) {
+            popupLeft = 0;
+        } else if (popupLeft + popupWidth > viewportWidth) {
+            popupLeft = viewportWidth - popupWidth;
         }
+
+        searchPopup.style.left = popupLeft + 'px';
+        searchPopup.style.top = iconRect.bottom + 10 + 'px';
+    }
 
 
 
 
     });
-    document.getElementById('searchButton').addEventListener('click', function () {
+    document.getElementById('searchButton').addEventListener('click', function() {
+        // Get the search input value
         console.log('searchInput');
         const searchInput = document.getElementById('searchInput').value.toLowerCase();
         console.log(searchInput);
+        // Array to store matching posts
         const matchingPosts = [];
         console.log(blogPosts)
+        // Iterate through blogPosts array to find matches
         blogPosts.forEach(post => {
+            // Check if title or content contains the search keyword
             if (post.title.toLowerCase().includes(searchInput) || post.content.toLowerCase().includes(searchInput)) {
                 matchingPosts.push(post);
             }
         });
 
+        // Show top 5 matching posts in a popup below the search bar
         showSearchResultsPopup(matchingPosts.slice(0, 5));
     });
 
+    // Function to display search results in a popup
     function showSearchResultsPopup(posts) {
+        // Create a popup container
         const popupContainer = document.createElement('div');
         popupContainer.className = 'search-results-popup';
 
+        // Create a list to display posts
         const resultList = document.createElement('ul');
-
+        
+        // Iterate through matching posts and create list items
         posts.forEach(post => {
             const listItem = document.createElement('li');
-            const title = document.createElement('strong');
-            title.textContent = post.title;
-            const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' '));
-            listItem.appendChild(title);
-            listItem.appendChild(content);
-            resultList.appendChild(listItem);
-            listItem.addEventListener('click', function () {
-                const postId = post.id;
-                const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
-                window.location.href = url;
-            });
-
+        const title = document.createElement('strong'); // Create <strong> tag for the title
+        title.textContent = post.title; // Set title text
+        const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' ')); // Create text node for content
+        listItem.appendChild(title); // Append title to list item
+        listItem.appendChild(content); // Append content to list item
+        resultList.appendChild(listItem); // Append list item to result list
+            listItem.addEventListener('click', function() {
+            const postId = post.id; // Get the postId
+            const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
+            window.location.href = url; // Redirect to the corresponding URL
+        });
+            
         });
 
+        // Add the list to the popup container
         popupContainer.appendChild(resultList);
         searchPopup.style.display = searchPopup.style.display === 'block' ? 'block' : 'none';
+        // Add the popup container below the search bar
         const searchInput = document.getElementById('searchInput');
         searchInput.parentNode.appendChild(popupContainer);
     }
 });
-
-
-function generateRelatedPostHTML(post) {
-    return `
-        <div class="blogpost">
-            <div class="related-posts-frame">
-            <img src="${post.image}" alt="" class="related-posts-img">
-                <div class="info">
-                    <div class="group-1">
-                        <div class="group-1-rectangle">
-                        <div class="group-1-technology" data-category="${post.category}">${post.category}</div>
-                        </div>
-                    </div>
-                    <div class="related-frame">
-                        <div class="details">
-                            <div class="personal-detail">
-                                <p class="name">${post.author}</p>
-                                <div class="divider"></div>
-                                <p class="name">${post.date}</p>
-                                <div class="divider"></div>
-                                <p class="name">${post.readTime} read</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="frame-322">
-                        <h3 class="related-posts-title">${post.title}</h3>
-                        <p class="related-post-text">${post.content}</p>
-                    </div>
-                </div>
-            </div>
-        </div>`;
-}
-
-
-sessionStorage.setItem('blogPosts', JSON.stringify(blogPosts));
