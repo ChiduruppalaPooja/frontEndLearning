@@ -49,31 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// document.getElementsByClassName('content').addEventListener('click', function() {
-//     document.getElementById('trending-topics').scrollIntoView({
-//         behavior: 'smooth'
-//     });
-// });
 
 
 
 
-var contentElements = document.getElementsByClassName('all');
-for (var i = 0; i < contentElements.length; i++) {
-    contentElements[i].addEventListener('click', function () {
-        var targetElement = document.getElementById('trending-topics');
-        if (!targetElement) {
-            targetElement = document.getElementById('posts-related');
-        }
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-        } else {
-            console.error("Neither 'trending-topics' nor 'posts-related' element found.");
-        }
-    });
-}
+
 
 
 
