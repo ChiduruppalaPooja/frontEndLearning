@@ -207,7 +207,7 @@ function handlePostClick(event) {
     const post = blogPosts.find(post => post.id === parseInt(postId));
     console.log(post);
     sessionStorage.setItem('postData', JSON.stringify(post));
-    const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpos/articlepage.html?id=${postId}`;
+    const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
     window.location.href = url;
 }
 
