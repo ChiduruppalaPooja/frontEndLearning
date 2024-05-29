@@ -449,26 +449,23 @@ document.addEventListener("DOMContentLoaded", function () {
         popupContainer.className = 'search-results-popup';
 
         const resultList = document.createElement('ul');
-
+        
         posts.forEach(post => {
             const listItem = document.createElement('li');
             const title = document.createElement('strong');
-            title.textContent = post.title.trim(); // Use trim() to remove whitespace
-
-           
+            title.textContent = post.title.trim(); 
+            const postId = post.id;
+           console.log(postId);
             const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' '));
             listItem.appendChild(title);
             listItem.appendChild(content);
             resultList.appendChild(listItem);
 
-            const postId = post.id;
-            console.log(postId);
-            listItem.addEventListener('click', function () {
-                console.log(postId);
-
-                const post = blogPosts.find(post => post.id === parseInt(postId));
             
-            sessionStorage.setItem('postData', JSON.stringify(post));
+            listItem.addEventListener('click', function () {
+            
+            
+            // sessionStorage.setItem('postData', JSON.stringify(post));
                 const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
 
                 window.location.href = url;
