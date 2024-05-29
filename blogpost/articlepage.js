@@ -1,7 +1,22 @@
 
 
 const slider = document.querySelector('.slider');
-const storedData = JSON.parse(sessionStorage.getItem('postData'));
+let storedData = sessionStorage.getItem('postData');
+
+// Check if storedData is null and parse it if not
+if (storedData && storedData !== "undefined") {
+    storedData = JSON.parse(storedData);
+  
+} else {
+    // If postData is not available, look for newdata
+    storedData = sessionStorage.getItem('newdata');
+    
+   
+    if (storedData && storedData !== "undefined") {
+        storedData = JSON.parse(storedData);
+    }
+}
+console.log(storedData);
 const blogPosts = JSON.parse(sessionStorage.getItem('blogPosts'));
 slider.addEventListener('input', function () {
     const newSize = this.value;
@@ -21,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var goBackDiv = document.querySelector('.go-back');
 
     goBackDiv.addEventListener('click', function () {
-        window.location.href = 'homepage.html';
+        window.location.href = 'home.html';
     });
 });
 
@@ -51,7 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const title = storedData.title;
         document.getElementById('main-title').textContent = title;
-
+        const id = storedData.id;
+        console.log(id);
+        console.log('Extracted ID:', id); // Add this line for debugging
+        const currentUrl = window.location.href; // Get the current URL
+        const newUrl = currentUrl.split('?')[0] + `?id=${id}`; // Construct the new URL
+        console.log('New URL:', newUrl); // Log the new URL for debugging
+        window.history.replaceState({}, '', newUrl); // Modify the existing URL
         const imageSrc = storedData.image;
         document.getElementById('main-img').src = imageSrc;
 
