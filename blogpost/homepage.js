@@ -438,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.log(postId);
                     const postData = blogPosts.find(post => post.id === parseInt(postId));
                     
-                    const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost//articlepage.html?id=${postId}`;
+                    const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
                     // window.location.href = url;
                     sessionStorage.setItem('newdata', JSON.stringify(postData));
                     
@@ -491,101 +491,5 @@ function generateRelatedPostHTML(post) {
             </div>
         </div>`;
 }
-$(document).ready(function () {
-    $('.category-link').on('click', function () {
-        var category = $(this).data('category'); 
 
-        var targetPost = $('.blogpost[data-category="' + category + '"]').first();
-
-      
-        if (targetPost.length) {
-            
-            $('html, body').animate({
-                scrollTop: targetPost.offset().top
-            }, 1000); 
-        } else {
-            window.location.href = 'home.html';
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    var searchIcon = document.getElementById('searchIcon');
-    var searchPopup = document.getElementById('searchPopup');
-
-    searchIcon.addEventListener('click', function () {
-        searchPopup.style.display = searchPopup.style.display === 'block' ? 'block' : 'none';
-        console.log(searchPopup.style.display);
-        if (window.innerWidth <= 1170) {
-            var iconRect = searchIcon.getBoundingClientRect();
-            var popupWidth = searchPopup.offsetWidth;
-            var viewportWidth = window.innerWidth;
-            var popupLeft = iconRect.left + (iconRect.width - popupWidth) / 2;
-
-
-            if (popupLeft < 0) {
-                popupLeft = 0;
-            } else if (popupLeft + popupWidth > viewportWidth) {
-                popupLeft = viewportWidth - popupWidth;
-            }
-
-            searchPopup.style.left = popupLeft + 'px';
-            searchPopup.style.top = iconRect.bottom + 10 + 'px';
-        }
-
-
-
-
-    });
-    document.getElementById('searchButton').addEventListener('click', function () {
-        console.log('searchInput');
-        const searchInput = document.getElementById('searchInput').value.toLowerCase();
-        console.log(searchInput);
-        const matchingPosts = [];
-        const blogPosts = JSON.parse(sessionStorage.getItem('blogPosts'));
-        blogPosts.forEach(post => {
-            if (post.title.toLowerCase().includes(searchInput) || post.content.toLowerCase().includes(searchInput)) {
-                matchingPosts.push(post);
-            }
-        });
-
-        showSearchResultsPopup(matchingPosts.slice(0, 5));
-    });
-
-    function showSearchResultsPopup(posts) {
-        const popupContainer = document.createElement('div');
-        popupContainer.className = 'search-results-popup';
-
-        const resultList = document.createElement('ul');
-
-        posts.forEach(post => {
-            const listItem = document.createElement('li');
-            const title = document.createElement('strong');
-            title.textContent = post.title.trim(); // Use trim() to remove whitespace
-
-           
-            const content = document.createTextNode(": " + post.content.split(' ').slice(0, 5).join(' '));
-            listItem.appendChild(title);
-            listItem.appendChild(content);
-            resultList.appendChild(listItem);
-
-
-            listItem.addEventListener('click', function () {
-                const postId = post.id;
-                console.log(postId);
-                const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
-
-                window.location.href = url;
-            });
-
-        });
-
-
-        popupContainer.appendChild(resultList);
-        searchPopup.style.display = searchPopup.style.display === 'block' ? 'block' : 'none';
-
-        const searchInput = document.getElementById('searchInput');
-        searchInput.parentNode.appendChild(popupContainer);
-    }
-});
 

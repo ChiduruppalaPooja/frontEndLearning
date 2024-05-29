@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
             listItem.addEventListener('click', function () {
                 const postId = post.id;
                 console.log(postId);
-                const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
+                const url = `http://127.0.0.1:5500/articlepage.html?id=${postId}`;
 
                 window.location.href = url;
             });
