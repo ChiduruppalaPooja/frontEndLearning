@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('main-title').textContent = title;
         const id = storedData.id;
         console.log(id);
-        console.log('Extracted ID:', id); // Add this line for debugging
-        const currentUrl = window.location.href; // Get the current URL
-        const newUrl = currentUrl.split('?')[0] + `?id=${id}`; // Construct the new URL
-        console.log('New URL:', newUrl); // Log the new URL for debugging
-        window.history.replaceState({}, '', newUrl); // Modify the existing URL
+        console.log('Extracted ID:', id); 
+        const currentUrl = window.location.href; 
+        const newUrl = currentUrl.split('?')[0] + `?id=${id}`; 
+        console.log('New URL:', newUrl);
+        window.history.replaceState({}, '', newUrl); 
         const imageSrc = storedData.image;
         document.getElementById('main-img').src = imageSrc;
 
@@ -118,17 +118,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 $(document).ready(function () {
     $('.category-link').on('click', function () {
-        var category = $(this).data('category'); // Get the category from the clicked link
+        var category = $(this).data('category'); 
 
-        // Find the first post with the matching data-category attribute
         var targetPost = $('.blogpost[data-category="' + category + '"]').first();
 
-        // Check if such a post exists
+      
         if (targetPost.length) {
-            // Scroll to the first post with the matching category
+            
             $('html, body').animate({
                 scrollTop: targetPost.offset().top
-            }, 1000); // Duration of scroll in milliseconds
+            }, 1000); 
         } else {
             alert("No posts found in the " + category + " category");
         }
