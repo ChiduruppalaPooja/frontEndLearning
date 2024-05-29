@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('I am postId from function');
         console.log(postId);
         sessionStorage.setItem('postData', JSON.stringify(post));
-        const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpos/articlepage.html?id=${postId}`;
+        const url = `https://chiduruppalapooja.github.io/frontEndLearning/blogpost/articlepage.html?id=${postId}`;
         window.location.href = url;
     }
 
