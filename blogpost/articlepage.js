@@ -337,11 +337,14 @@ $(document).ready(function () {
         } else {
             window.location.href = 'home.html';
             var targetPostAtHome = $('.blogpost[data-category="' + category + '"]').first();
+            console.log('returned to home');
             if (targetPostAtHome.length) {
 
                 $('html, body').animate({
                     scrollTop: targetPostAtHome.offset().top - 20
                 }, 1000);
+                console.log('returned to home and scrolled');
+
             } else {
                 window.location.href = 'home.html';
             }
