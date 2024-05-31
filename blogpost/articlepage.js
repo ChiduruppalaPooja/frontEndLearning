@@ -336,6 +336,15 @@ $(document).ready(function () {
             }
         } else {
             window.location.href = 'home.html';
+            var targetPostAtHome = $('.blogpost[data-category="' + category + '"]').first();
+            if (targetPostAtHome.length) {
+
+                $('html, body').animate({
+                    scrollTop: targetPostAtHome.offset().top - 20
+                }, 1000);
+            } else {
+                window.location.href = 'home.html';
+            }
         }
     });
 });
