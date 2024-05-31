@@ -339,3 +339,10 @@ $(document).ready(function () {
         }
     });
 });
+
+//all
+$(document).ready(function () {
+    $('.all').on('click', function () {
+        window.location.href = 'home.html';
+    }
+)});
