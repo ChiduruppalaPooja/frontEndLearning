@@ -375,10 +375,13 @@ $(document).ready(function () {
                 scrollTop: targetPostAtHome.offset().top - 20
             }, 1000);
             console.log('Returned to home and scrolled');
-        } 
-        sessionStorage.removeItem('category');
+        } else {
+            console.error('Target post element not found.');
+        }
+        sessionStorage.removeItem('categoryData'); 
     }
 });
+
 
     //trendingposts
 
