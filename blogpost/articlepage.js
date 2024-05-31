@@ -335,19 +335,9 @@ $(document).ready(function () {
                 console.error("Target post element not found.");
             }
         } else {
+            sessionStorage.setItem('categoryData', JSON.stringify(category));
             window.location.href = 'home.html';
-            var targetPostAtHome = $('.blogpost[data-category="' + category + '"]').first();
-            console.log('returned to home');
-            if (targetPostAtHome.length) {
-
-                $('html, body').animate({
-                    scrollTop: targetPostAtHome.offset().top - 20
-                }, 1000);
-                console.log('returned to home and scrolled');
-
-            } else {
-                window.location.href = 'home.html';
-            }
+            
         }
     });
 });
@@ -355,6 +345,7 @@ $(document).ready(function () {
 //all
 $(document).ready(function () {
     $('.all').on('click', function () {
+        sessionStorage.setItem('categoryData', JSON.stringify(category));
         window.location.href = 'home.html';
     }
     
