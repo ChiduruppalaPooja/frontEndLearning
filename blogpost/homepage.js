@@ -364,9 +364,21 @@ $(document).ready(function () {
     });
 });
 
-
-
-
+//retuned from article
+$(document).ready(function () {
+    const category = JSON.parse(sessionStorage.getItem('categoryData'));
+    console.log('return and read invoked');
+    if (category) {
+        var targetPostAtHome = $('.blogpost[data-category="' + category + '"]').first();
+        if (targetPostAtHome.length) {
+            $('html, body').animate({
+                scrollTop: targetPostAtHome.offset().top - 20
+            }, 1000);
+            console.log('Returned to home and scrolled');
+        } 
+        sessionStorage.removeItem('category');
+    }
+});
 
     //trendingposts
 
