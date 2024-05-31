@@ -345,4 +345,13 @@ $(document).ready(function () {
     $('.all').on('click', function () {
         window.location.href = 'home.html';
     }
+    
+)});
+
+//title
+$(document).ready(function () {
+    $('.title').on('click', function () {
+        window.location.href = 'home.html';
+    }
+    
 )});
