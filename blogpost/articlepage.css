@@ -1055,7 +1055,8 @@ body.dark-mode .search-results-popup li {
 .search-results-popup li:last-child {
     border-bottom: none;
 }
-.group-4:hover{
+.group-4:hover,
+.title:hover{
     cursor: pointer;
 }
 

@@ -941,7 +941,8 @@ body.dark-mode .greaterthan {
     transform: rotate(225deg);
 }
 
-.group-4:hover{
+.group-4:hover,
+.title:hover{
     cursor: pointer;
 }
 
